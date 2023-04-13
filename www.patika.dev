@@ -1,0 +1,12 @@
+[16,21,11,8,12,22] -> Merge Sort
+İlk olarak diziyi parçalara ayırırız. Her girdi tek kalana kadar yarıya böleriz.
+[16,21,11] == [8,12,22] olarak iki dala bölünür.
+İlk dal [16] == [21,11] olarak ayrı bir dala, ikinci dal [8] == [12,22] olarak ayrı bir dala bölünür.
+[16] == [21] == [11] ve  [8] == [12] == [22] şeklinde hepsini parçalara ayırırız ve ardından birleştirmeye başlarız.
+Birleştirme işleminde n veri sayısı olacak şekilde (n-1) sorgu yapılarak küçük olan sayı sola büyük olan sağa yazılır. 
+[16] == [11,21] ve [8] == [12,22] tekrar uygulanır.
+[11,16,21] ve [8,12,22] tekrar uygulanır.
+[8,11,12,16,21,22] şeklinde dizi sıralanmış olur. 
+
+Her karşılaştırmada n-1 sorgu yaptığımız için O(n) ve parçalara n/2 şeklinde böldüğümüz için O(logn) bigonotationlarını buluruz. 
+Merge sort yönteminin nihai bigonotationu ise O(n.logn) olacaktır.
